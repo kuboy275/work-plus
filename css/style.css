@@ -4,6 +4,10 @@ body {
     color: #42464e;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body>#container {
     width: 1920px!important;
     max-width: 100%;
@@ -284,11 +288,9 @@ body>#container {
     margin: 0;
 }
 
-
-/* 
- .header .main-header ul li .childMenu.product li:nth-child(1):hover {
+.header .main-header ul li .childMenu.product li:hover {
     background: #e5f3ff;
-} */
+}
 
 .header .main-header .btn-menu {
     display: inline-block;
@@ -2034,7 +2036,7 @@ body>#container {
 .product .faq button.view-more {
     border: 1px solid #6ecd9c;
     opacity: .8;
-    border-radius: 5px;
+    border-radius: 30px;
     color: #6ecd9c;
     font-size: 25px;
 }
@@ -2106,8 +2108,12 @@ body>#container {
 }
 
 .price .intro {
-    background: url(../images/product/bg-intro.png) no-repeat top center;
+    background-image: url(../images/product/bg-intro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 100px 0;
+    margin-top: -35px;
 }
 
 .price .faq {
@@ -2129,6 +2135,10 @@ body>#container {
 }
 
 .price .faq .block-faq .in-faq .item-line {
+    position: relative;
+}
+
+.price .faq .block-faq .in-faq .item-line h4 {
     text-align: left;
     margin-bottom: 20px;
     position: relative;
@@ -2136,27 +2146,24 @@ body>#container {
     background: #fff;
     border-radius: 10px;
     padding: 20px 0;
-}
-
-.price .faq .block-faq .in-faq .item-line.active {
-    border: none;
-}
-
-.price .faq .block-faq .in-faq .item-line h4 {
     padding-right: 40px;
     padding-left: 15px;
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 0;
     cursor: pointer;
 }
 
 .price .faq .block-faq .in-faq .item-line.active h4 {
     font-weight: 700;
-    margin-bottom: 15px;
+    border: none;
+    margin-bottom: 0;
 }
 
-.price .faq .block-faq .in-faq .item-line h4 .icon:after {
+.price .faq .block-faq .in-faq .item-line .icon {
+    cursor: pointer;
+}
+
+.price .faq .block-faq .in-faq .item-line .icon:after {
     content: "";
     width: 25px;
     height: 25px;
@@ -2169,7 +2176,7 @@ body>#container {
     top: 15px;
 }
 
-.price .faq .block-faq .in-faq .item-line h4 .icon:after {
+.price .faq .block-faq .in-faq .item-line .icon:after {
     content: "";
     width: 30px;
     height: 30px;
@@ -2182,7 +2189,7 @@ body>#container {
     top: 12px;
 }
 
-.price .faq .block-faq .in-faq .item-line.active h4 .icon:before {
+.price .faq .block-faq .in-faq .item-line.active .icon:before {
     content: "";
     width: 30px;
     height: 30px;
@@ -2194,7 +2201,7 @@ body>#container {
     border-radius: 30px;
 }
 
-.price .faq .block-faq .in-faq .item-line.active h4 .icon:after {
+.price .faq .block-faq .in-faq .item-line.active .icon:after {
     background: url(../images/product/minus.png) center no-repeat;
     z-index: 1;
 }
@@ -2211,6 +2218,7 @@ body>#container {
 
 .price .faq .block-faq .in-faq .item-line.active p {
     display: block;
+    margin-bottom: 20px;
 }
 
 
