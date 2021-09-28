@@ -1517,6 +1517,7 @@ body>#container {
 .about-us .partner {
     text-align: center;
     padding-bottom: 280px;
+    margin-bottom: -200px;
     background: url(../images/bg-support-sapo.png) no-repeat bottom center;
     background-position-y: 350px;
 }
@@ -1609,7 +1610,7 @@ body>#container {
 .app__page .qr {
     position: relative;
     overflow: hidden;
-    margin-bottom: 300px;
+    margin-bottom: 150px;
 }
 
 .app__page .qr::before {
