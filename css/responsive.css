@@ -666,8 +666,12 @@
     }
 }
 
-@media(min-width:320px) and (max-width:767px) {
+@media(min-width:315px) and (max-width:767px) {
     .btn-registration {
-        margin-top: 16px;
+        padding: 0 50px;
+        line-height: 50px;
+    }
+    .about-us .banner .btn-registration {
+        padding: 0 50px;
     }
 }
