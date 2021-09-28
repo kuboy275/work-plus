@@ -2033,9 +2033,12 @@ body>#container {
     opacity: .5;
 }
 
+.product .faq .faq__content .content-hide.hide {
+    display: none;
+}
+
 .product .faq button.view-more {
     border: 1px solid #6ecd9c;
-    opacity: .8;
     border-radius: 30px;
     color: #6ecd9c;
     font-size: 25px;

@@ -389,10 +389,21 @@
                                         <p>
                                             Phân mễm quản lý công việc cũng đã có phiên bản smarlphone, hỗ trợ giao việc nhanh chóng mọi lúc mọi noi. Nhân viên cũng nhận được thông báo ngay lập tức qua thông báo trên app di động và dễ dàng quản lý được mọi công việc được giao.
                                         </p>
-                                        <p class="faq__opacity">
+                                        <p class="content-opacity faq__opacity">
                                             <span class="font-bold">  Phản mềm quản lý công việc</span> cũng góp phản tạo nên một môi trường làm việc mở. Các thẻ tên @tên nhân viên sẽ hỗ trợ trong quá trình trao đổi, thông bảo. hoặc giao việc. Ở chiều
                                             ngược lại, nhân viên cũng có thể. gắn thẻ tên sếp hoặc đồng nghiệp đẻ giải quyết công việc nhanh hơn mả không cân phải chờ các. thông báo chỉ đạo trực tiếp
                                         </p>
+                                        <div class="content-hide hide">
+                                            <p>
+                                                Phân mễm quản lý công việc cũng đã có phiên bản smarlphone, hỗ trợ giao việc nhanh chóng mọi lúc mọi noi. Nhân viên cũng nhận được thông báo ngay lập tức qua thông báo trên app di động và dễ dàng quản lý được mọi công việc được giao.
+                                            </p>
+                                            <p>
+                                                Phân mễm quản lý công việc cũng đã có phiên bản smarlphone, hỗ trợ giao việc nhanh chóng mọi lúc mọi noi. Nhân viên cũng nhận được thông báo ngay lập tức qua thông báo trên app di động và dễ dàng quản lý được mọi công việc được giao.
+                                            </p>
+                                            <p>
+                                                Phân mễm quản lý công việc cũng đã có phiên bản smarlphone, hỗ trợ giao việc nhanh chóng mọi lúc mọi noi. Nhân viên cũng nhận được thông báo ngay lập tức qua thông báo trên app di động và dễ dàng quản lý được mọi công việc được giao.
+                                            </p>
+                                        </div>
                                         <div class="col-12 col-sm-10 text-center mx-auto mt-4 mb-5">
                                             <button class="view-more w-100 py-2 btn">Xem thêm</button>
                                         </div>
@@ -854,6 +865,18 @@
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
         }
+
+        $(".view-more").click(function() {
+            $(this).prev().slideToggle(300);
+            $('.content-opacity').toggleClass("faq__opacity");
+            if ($(this).text() == "Xem thêm") {
+                $(this).text("Rút gọn");
+                $('.content-hide').removeClass("hide");
+            } else {
+                $(this).text("Xem thêm");
+                $('.content-hide').addClass("hide");
+            }
+        });
     </script>
 
 </html>
