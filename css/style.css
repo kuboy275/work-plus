@@ -45,7 +45,7 @@ button:focus {
 }
 
 .font-60 {
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .font-50 {
@@ -53,7 +53,7 @@ button:focus {
 }
 
 .font-40 {
-    font-size: 50px;
+    font-size: 40px;
 }
 
 .font-35 {
@@ -178,6 +178,34 @@ body>#container {
     color: #fff;
 }
 
+.header .main-header ul li.gift .quanlity {
+    position: absolute;
+    top: 20px;
+    right: -16px;
+    width: 25px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 45%;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+.menu-mobile .gift-mobile .quanlity {
+    position: absolute;
+    top: 10px;
+    right: -16px;
+    width: 25px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 45%;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
 .header .main-header ul li:hover>a {
     color: #0089ff;
 }
@@ -288,7 +316,6 @@ body>#container {
 
 .header .main-header .btn-menu {
     display: inline-block;
-    vertical-align: top;
     line-height: 54px;
     text-decoration: none;
 }
@@ -1777,7 +1804,7 @@ body>#container {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding-bottom: 80px;
+    padding-bottom: 0;
 }
 
 .list__product .banner .line {
@@ -1947,6 +1974,30 @@ body>#container {
 
 .partner .video .icon i {
     padding-left: 5px;
+}
+
+.animation-down img {
+    animation: bounce12 2s ease infinite;
+    background: red;
+}
+
+@keyframes bounce12 {
+    0%,
+    10%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        -ms-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+    40%,
+    60% {
+        -webkit-transform: translateY(-15px) translateX(-50%);
+        -ms-transform: translateY(-15px) translateX(-50%);
+        transform: translateY(-15px) translateX(-50%);
+    }
 }
 
 
