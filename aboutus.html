@@ -596,9 +596,9 @@
 <script src="./js/aboutus.js"></script>
 <script src="https://use.fontawesome.com/452826394c.js"></script>
 <script type="text/javascript">
-    $('#openMenu').on("click", openMenu);
-    $('#mobileCloseMenu').on("click", closeMenu);
-    $('#overLayCloseMenu').on("click", closeMenu);
+    $('#openMenu').on("touchstart", openMenu);
+    $('#mobileCloseMenu').on("touchstart", closeMenu);
+    $('#overLayCloseMenu').on("touchstart", closeMenu);
 
     function openMenu() {
         $('body').css('overflow', 'hidden');
