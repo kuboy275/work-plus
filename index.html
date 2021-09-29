@@ -1069,13 +1069,16 @@
         <script src="./js/script.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript">
-            // const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
-            var ua = navigator.userAgent;
-            const mytap = (ua.match(/iPad/i) || ua.match(/iPhone/)) ? "touchstart" : "click";
+            const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
 
-            $('#openMenu').on(mytap, openMenu);
-            $('#mobileCloseMenu').on(mytap, closeMenu);
-            $('#overLayCloseMenu').on(mytap, closeMenu);
+            const btnOpenMenu = document.querySelector("#openMenu");
+            const btnCloseMenu = document.querySelector("#mobileCloseMenu");
+            const overLayCloseMenu = document.querySelector("#overLayCloseMenu");
+            btnOpenMenu.addEventListener("click", openMenu);
+            btnCloseMenu.addEventListener("click", closeMenu);
+            overLayCloseMenu.addEventListener("click", closeMenu);
+
+
 
 
             function openMenu() {
