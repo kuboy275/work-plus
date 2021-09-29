@@ -596,9 +596,11 @@
 <script src="./js/aboutus.js"></script>
 <script src="https://use.fontawesome.com/452826394c.js"></script>
 <script type="text/javascript">
-    $('#openMenu').on("touchstart", openMenu);
-    $('#mobileCloseMenu').on("touchstart", closeMenu);
-    $('#overLayCloseMenu').on("touchstart", closeMenu);
+    const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
+
+    $('#openMenu').on(mytap, openMenu);
+    $('#mobileCloseMenu').on(mytap, closeMenu);
+    $('#overLayCloseMenu').on(mytap, closeMenu);
 
     function openMenu() {
         $('body').css('overflow', 'hidden');

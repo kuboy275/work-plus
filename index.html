@@ -1069,15 +1069,18 @@
         <script src="./js/script.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript">
-            $('#openMenu').on("touchstart", openMenu);
-            $('#mobileCloseMenu').on("touchstart", closeMenu);
-            $('#overLayCloseMenu').on("touchstart", closeMenu);
+            const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
+
+            $('#openMenu').on(mytap, openMenu);
+            $('#mobileCloseMenu').on(mytap, closeMenu);
+            $('#overLayCloseMenu').on(mytap, closeMenu);
 
 
             function openMenu() {
                 $('body').css('overflow', 'hidden');
                 $('.overlay-menu').fadeIn(300);
                 $('.menu-mobile').addClass('show');
+                alert('hi')
             }
 
             function closeMenu() {
