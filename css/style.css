@@ -122,6 +122,7 @@ body>#container {
 
 .header .main-header .main-logo img {
     height: 40px;
+    object-fit: contain;
 }
 
 .header .main-header {
@@ -194,7 +195,7 @@ body>#container {
 
 .menu-mobile .gift-mobile .quanlity {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: -16px;
     width: 25px;
     height: 20px;

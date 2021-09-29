@@ -16,7 +16,6 @@
 
 <body>
     <div id="container">
-
         <!-- START HEADER -->
         <div id="header" class="header pt-2">
             <div class="main-header d-flex align-items-center flex-wrap">
@@ -123,7 +122,7 @@
                                     <a class="btn-registration" href="javascript:;"><span>Dùng thử</span></a>
                                 </li>
                             </ul>
-                            <a aria-label="button" href="#" class="d-inline-block d-xl-none btn-menu" onclick="openMenu();">
+                            <a aria-label="button" id="openMenu" href="#" class="d-inline-block d-xl-none btn-menu">
                                 <img src="./images/index/navbar.jpg" alt="">
                             </a>
                         </div>
@@ -140,7 +139,7 @@
                 <a href="index.html">
                     <img src="./images/index/logo.jpg" alt="Logo" />
                 </a>
-                <a aria-label="Intermdiate JavaScript" href="javascript:;" class="btn-close-menu" onclick="closeMenu();">
+                <a aria-label="Intermdiate JavaScript" href="javascript:;" id="mobileCloseMenu" class="btn-close-menu">
                     <svg width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.6574 15.1436L29.6568 2.14413C30.1144 1.68646 30.1144 0.944427 29.6568 0.486811C29.1991 0.0291945 28.4571 0.029136 27.9995 0.486811L15 13.4863L2.00058 0.486811C1.5429 0.029136 0.800872 0.029136 0.343256 0.486811C-0.11436 0.944486 -0.114419 1.68652 0.343256 2.14413L13.3427 15.1435L0.343256 28.143C-0.114419 28.6007 -0.114419 29.3427 0.343256 29.8003C0.572064 30.0291 0.872005 30.1435 1.17195 30.1435C1.47189 30.1435 1.77177 30.0291 2.00064 29.8003L15 16.8009L27.9994 29.8003C28.2282 30.0291 28.5281 30.1435 28.8281 30.1435C29.128 30.1435 29.4279 30.0291 29.6568 29.8003C30.1144 29.3427 30.1144 28.6006 29.6568 28.143L16.6574 15.1436Z" fill="#777777"/>
                     </svg>
@@ -231,8 +230,8 @@
         </div>
         <!-- END START MENU MOBILE -->
         <!-- ========================================================== -->
-
-        <div class="overlay-menu" onclick="closeMenu()"></div>
+        <div class="overlay-menu" id="overLayCloseMenu"></div>
+        <!-- ========================================================== -->
 
         <!-- WRAPPER -->
 
@@ -697,6 +696,10 @@
         <script src="./js/script.js"></script>
 
         <script type="text/javascript">
+            $('#openMenu').on("click", openMenu);
+            $('#mobileCloseMenu').on("click", closeMenu);
+            $('#overLayCloseMenu').on("click", closeMenu);
+
             function openMenu() {
                 $('body').css('overflow', 'hidden');
                 $('.overlay-menu').fadeIn(300);
