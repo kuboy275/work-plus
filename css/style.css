@@ -1492,7 +1492,7 @@ body>#container {
 /* BANNER */
 
 .about-us .banner {
-    background: url(./images/aboutus/banner.png) no-repeat top center
+    background: url(../images/aboutus/banner.png) no-repeat top center
 }
 
 .about-us .banner .content p {
