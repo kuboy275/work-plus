@@ -149,10 +149,10 @@
             <div class="box-scroll">
                 <ul class="nav nav-bottom">
                     <li>
-                        <a href="#" data-toggle="collapse" data-target="#nav-bottom-child-1">
+                        <a data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                             Sản phẩm
                         </a>
-                        <div id="nav-bottom-child-1" class="panel-collapse collapse">
+                        <div class="collapse" id="collapseExample">
                             <ul class="sub-menu">
                                 <li>
                                     <a href="product.html">
@@ -619,24 +619,24 @@
     </div>
 </body>
 <script type="text/javascript">
-    const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
+    const btnOpenMenu = document.querySelector("#btnOpenMenu");
+    const btnCloseMenu = document.querySelector("#btnCloseMenu");
+    const overlayCloseMenu = document.querySelector("#overlayCloseMenu");
+    const menuMobile = document.querySelector(".menu-mobile");
 
-    $('#openMenu').on(mytap, openMenu);
-    $('#mobileCloseMenu').on(mytap, closeMenu);
-    $('#overLayCloseMenu').on(mytap, closeMenu);
+    btnOpenMenu.addEventListener("click", openMenu);
+    btnCloseMenu.addEventListener("click", closeMenu);
+    overlayCloseMenu.addEventListener("click", closeMenu);
 
     function openMenu() {
-        $('body').css('overflow', 'hidden');
-        $('.overlay-menu').fadeIn(300);
-        $('.menu-mobile').addClass('show');
+        menuMobile.classList.add("show");
+        overlayCloseMenu.style.display = "block";
     }
 
     function closeMenu() {
-        $('body').css('overflow', '');
-        $('.overlay-menu').fadeOut(300);
-        $('.menu-mobile').removeClass('show');
+        menuMobile.classList.remove("show");
+        overlayCloseMenu.style.display = "none";
     }
-    addLoadEvent(function() {});
 </script>
 
 </html>
