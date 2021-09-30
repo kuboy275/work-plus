@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/responsive.css">
-    <script src="./js/aboutus.js"></script>
 
 </head>
 
@@ -680,8 +679,22 @@
     <!-- END FOOTER -->
     <!-- ==================================================== -->
 
-
+    <script src="./js/aboutus.js"></script>
     <script src="./js/menu-script.js"></script>
+    <script>
+        const viewMore = document.querySelector(".view-more");
+        const contentOpacity = document.querySelector(".content-opacity");
+        const contentHide = document.querySelector(".content-hide");
+        viewMore.addEventListener("click", () => {
+            contentOpacity.classList.toggle("faq__opacity");
+            contentHide.classList.toggle("hide");
+            if (viewMore.textContent == "Xem thêm") {
+                viewMore.textContent = "Rút gọn";
+            } else {
+                viewMore.textContent = "Xem thêm";
+            }
+        });
+    </script>
     <script>
         addLoadEvent(function() {
             $.ajax({
@@ -854,18 +867,6 @@
             document.getElementById(cityName).style.display = "block";
             evt.currentTarget.className += " active";
         }
-
-        $(".view-more").click(function() {
-            $(this).prev().slideToggle(300);
-            $('.content-opacity').toggleClass("faq__opacity");
-            if ($(this).text() == "Xem thêm") {
-                $(this).text("Rút gọn");
-                $('.content-hide').removeClass("hide");
-            } else {
-                $(this).text("Xem thêm");
-                $('.content-hide').addClass("hide");
-            }
-        });
     </script>
 
 </html>
