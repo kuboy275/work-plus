@@ -840,6 +840,7 @@
 <script src="./js/jquery.min.js"></script>
 <script src="./js/popper.min.js"></script>
 <script src="./js/bootstrap.min.js"></script>
+<script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/custom.js"></script>
 <script>
     const supportMobileItems = document.querySelectorAll('.support-mobile .item');
@@ -893,146 +894,143 @@
     });
 </script>
 <script>
-    addLoadEvent(function() {
-        var tabtitle = new Swiper('.tab-title .swiper-container', {
-            spaceBetween: 10,
-            slidesPerView: 4,
-            freeMode: true,
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-            touchRatio: 0,
-            breakpoints: {
-                767: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                    touchRatio: 1,
-                },
-                991: {
-                    slidesPerView: 4,
-                    touchRatio: 1,
-                    spaceBetween: 25,
-                },
-                1199: {
-                    slidesPerView: 4,
-                    spaceBetween: 80,
-                    touchRatio: 0,
-                }
-            }
-        });
-        var tabcontent = new Swiper('.tab-content .swiper-container', {
-            spaceBetween: 10,
-            effect: 'fade',
-            crossFade: true,
-            touchRatio: 0,
-            breakpoints: {
-                767: {
-                    autoHeight: true,
-                },
-                991: {
-                    autoHeight: true,
-                },
-                1199: {
-                    autoHeight: true,
-                }
+    var tabtitle = new Swiper('.tab-title .swiper-container', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        touchRatio: 0,
+        breakpoints: {
+            767: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+                touchRatio: 1,
             },
-            pagination: {
-                el: '.tab-content .swiper-pagination',
-                clickable: true,
+            991: {
+                slidesPerView: 4,
+                touchRatio: 1,
+                spaceBetween: 25,
             },
-            thumbs: {
-                swiper: tabtitle
-            }
-        });
-
-        function activeTabMobile(obj) {
-            var id = $(obj).attr('data-href');
-            if ($(obj).hasClass('active')) {
-                $(obj).removeClass('active');
-                $(id).removeClass('active');
-            } else {
-                $('.tab-name h4').removeClass('active');
-                $(obj).addClass('active');
-                $('.tab-name .tab-content').removeClass('active');
-                $(id).addClass('active');
+            1199: {
+                slidesPerView: 4,
+                spaceBetween: 80,
+                touchRatio: 0,
             }
         }
-        $('.tab-name h4').click(function() {
-            activeTabMobile(this);
-            $('html, body').animate({
-                scrollTop: $(this).offset().top - 30
-            }, 500);
-            return false;
-        });
-
-
-        var omniSwiper = new Swiper('.slide-omni .swiper-container', {
-            slidesPerView: 3,
-            pagination: {
-                el: '.slide-omni .swiper-pagination',
-                clickable: true,
+    });
+    var tabcontent = new Swiper('.tab-content .swiper-container', {
+        spaceBetween: 10,
+        effect: 'fade',
+        crossFade: true,
+        touchRatio: 0,
+        breakpoints: {
+            767: {
+                autoHeight: true,
             },
-            spaceBetween: 60,
-            autoplay: '5000',
-            loop: true,
-            touchRatio: 0,
-            breakpoints: {
-                767: {
-                    slidesPerView: 1,
-                    spaceBetween: 40,
-                    touchRatio: 1,
-                },
-                991: {
-                    slidesPerView: 2,
-                    touchRatio: 1,
-                    spaceBetween: 60,
-                },
-                1199: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                    touchRatio: 0,
-                }
-            }
-        });
-        var custommerSwiper = new Swiper('.slide-custommer .swiper-container', {
-            slidesPerView: 3,
-            pagination: {
-                el: '.slide-custommer .swiper-pagination',
-                clickable: true,
+            991: {
+                autoHeight: true,
             },
-            spaceBetween: 60,
-            autoplay: '5000',
-            loop: false,
-            touchRatio: 0,
-            breakpoints: {
-                767: {
-                    slidesPerView: 1,
-                    spaceBetween: 40,
-                    touchRatio: 1,
-                },
-                991: {
-                    slidesPerView: 2,
-                    touchRatio: 1,
-                    spaceBetween: 60,
-                },
-                1199: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                    touchRatio: 1,
-                }
+            1199: {
+                autoHeight: true,
             }
-        });
+        },
+        pagination: {
+            el: '.tab-content .swiper-pagination',
+            clickable: true,
+        },
+        thumbs: {
+            swiper: tabtitle
+        }
+    });
+
+    function activeTabMobile(obj) {
+        var id = $(obj).attr('data-href');
+        if ($(obj).hasClass('active')) {
+            $(obj).removeClass('active');
+            $(id).removeClass('active');
+        } else {
+            $('.tab-name h4').removeClass('active');
+            $(obj).addClass('active');
+            $('.tab-name .tab-content').removeClass('active');
+            $(id).addClass('active');
+        }
+    }
+    $('.tab-name h4').click(function() {
+        activeTabMobile(this);
+        $('html, body').animate({
+            scrollTop: $(this).offset().top - 30
+        }, 500);
+        return false;
+    });
 
 
-        $(".faq h4").click(function() {
-            $('.question').removeClass('visited');
-            if ($(this).parent().hasClass('active')) {
-                $(this).parent().removeClass("active");
-            } else {
-                $(".faq .question").removeClass("active");
-                $(this).parent().addClass("active");
+    var omniSwiper = new Swiper('.slide-omni .swiper-container', {
+        slidesPerView: 3,
+        pagination: {
+            el: '.slide-omni .swiper-pagination',
+            clickable: true,
+        },
+        spaceBetween: 60,
+        autoplay: '5000',
+        loop: true,
+        touchRatio: 0,
+        breakpoints: {
+            767: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+                touchRatio: 1,
+            },
+            991: {
+                slidesPerView: 2,
+                touchRatio: 1,
+                spaceBetween: 60,
+            },
+            1199: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                touchRatio: 0,
             }
-        });
+        }
+    });
+    var custommerSwiper = new Swiper('.slide-custommer .swiper-container', {
+        slidesPerView: 3,
+        pagination: {
+            el: '.slide-custommer .swiper-pagination',
+            clickable: true,
+        },
+        spaceBetween: 60,
+        autoplay: '5000',
+        loop: false,
+        touchRatio: 0,
+        breakpoints: {
+            767: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+                touchRatio: 1,
+            },
+            991: {
+                slidesPerView: 2,
+                touchRatio: 1,
+                spaceBetween: 60,
+            },
+            1199: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+                touchRatio: 1,
+            }
+        }
+    });
 
+
+    $(".faq h4").click(function() {
+        $('.question').removeClass('visited');
+        if ($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass("active");
+        } else {
+            $(".faq .question").removeClass("active");
+            $(this).parent().addClass("active");
+        }
     });
 </script>
 <script>

@@ -2032,25 +2032,6 @@ body>#container {
     background: red;
 }
 
-@keyframes bounce12 {
-    0%,
-    10%,
-    100%,
-    20%,
-    50%,
-    80% {
-        -webkit-transform: translateY(0) translateX(-50%);
-        -ms-transform: translateY(0) translateX(-50%);
-        transform: translateY(0) translateX(-50%);
-    }
-    40%,
-    60% {
-        -webkit-transform: translateY(-15px) translateX(-50%);
-        -ms-transform: translateY(-15px) translateX(-50%);
-        transform: translateY(-15px) translateX(-50%);
-    }
-}
-
 
 /* END LIST PRODUCT */
 
@@ -2108,6 +2089,10 @@ body>#container {
     width: 50px;
     height: 2px;
     margin: auto;
+}
+
+.product .down__app i {
+    animation: bounce12 2s ease infinite;
 }
 
 .product .faq {
@@ -2350,3 +2335,22 @@ body>#container {
 
 
 /* END secure */
+
+@keyframes bounce12 {
+    0%,
+    10%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateY(0) translateX(-50%);
+        -ms-transform: translateY(0) translateX(-50%);
+        transform: translateY(0) translateX(-50%);
+    }
+    40%,
+    60% {
+        -webkit-transform: translateY(-15px) translateX(-50%);
+        -ms-transform: translateY(-15px) translateX(-50%);
+        transform: translateY(-15px) translateX(-50%);
+    }
+}

@@ -1121,6 +1121,7 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/custom.js"></script>
     <script>
@@ -1151,44 +1152,41 @@
             })
         });
         // 
+        var packagesSwiper;
 
-        addLoadEvent(function() {
-            var packagesSwiper;
-
-            packagesSwiper = new Swiper('.slide-reason .swiper-container', {
-                speed: 500,
-                loop: false,
-                slidesPerView: 3,
-                spaceBetween: 70,
-                grabCursor: false,
-                observer: true,
-                observeParents: true,
-                touchRatio: 0,
-                pagination: {
-                    el: '.slide-reason .swiper-pagination',
-                    clickable: true,
+        packagesSwiper = new Swiper('.slide-reason .swiper-container', {
+            speed: 500,
+            loop: false,
+            slidesPerView: 3,
+            spaceBetween: 70,
+            grabCursor: false,
+            observer: true,
+            observeParents: true,
+            touchRatio: 0,
+            pagination: {
+                el: '.slide-reason .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                1199: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    touchRatio: 0,
+                    loop: false,
                 },
-                breakpoints: {
-                    1199: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                        touchRatio: 0,
-                        loop: false,
-                    },
-                    991: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
-                        touchRatio: 1,
-                        loop: false,
-                    },
-                    767: {
-                        slidesPerView: 1,
-                        spaceBetween: 35,
-                        touchRatio: 1,
-                        loop: false,
-                    }
+                991: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    touchRatio: 1,
+                    loop: false,
+                },
+                767: {
+                    slidesPerView: 1,
+                    spaceBetween: 35,
+                    touchRatio: 1,
+                    loop: false,
                 }
-            });
+            }
         });
         // 
 
