@@ -1505,7 +1505,11 @@ body>#container {
 /* BANNER */
 
 .about-us .banner {
-    background: url(../images/aboutus/banner.png) no-repeat top center
+    background-image: url(../images/aboutus/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
 }
 
 .about-us .banner .content p {
