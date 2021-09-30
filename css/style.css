@@ -352,13 +352,13 @@ body>#container {
     border-bottom: 1px solid #f1f1f1;
     position: relative;
     padding: 0 15px;
-    height: 87px;
+    height: 70px;
     display: flex;
     align-items: center;
 }
 
 .menu-mobile .logo-mobile img {
-    height: 54px;
+    height: 40px;
 }
 
 .menu-mobile .logo-mobile .btn-close-menu {
@@ -374,6 +374,8 @@ body>#container {
 
 .menu-mobile .logo-mobile .btn-close-menu svg {
     cursor: pointer;
+    width: 20px;
+    margin-right: 5px;
 }
 
 .menu-mobile .box-scroll {
