@@ -733,29 +733,29 @@
     <script>
         const supportMobileItems = document.querySelectorAll('.support-mobile .item');
 
-        // supportMobileItems.forEach((el, i) => {
-        //     el.addEventListener("click", () => {
-        //         supportMobileItems.forEach((el1, i) => {
-        //             if (el1.classList.contains("active")) {
-        //                 el1.classList.remove("active");
-        //             } else {
-        //                 el1.classList.remove("active");
-        //             }
-        //         });
-        //         el.classList.remove("active");
-        //         el.classList.add("active");
-        //     })
-        // })
+        supportMobileItems.forEach((el, i) => {
+            el.addEventListener("click", () => {
+                supportMobileItems.forEach((el1, i) => {
+                    if (el1.classList.contains("active")) {
+                        el1.classList.remove("active");
+                    } else {
+                        el1.classList.remove("active");
+                    }
+                });
+                el.classList.remove("active");
+                el.classList.add("active");
+            })
+        })
 
-        $(".support-mobile .item").click(function() {
-            if ($(this).hasClass("active")) {
-                $(".support-mobile .item").removeClass("active");
-            } else {
-                $(".support-mobile .item").removeClass("active");
-                $(this).fadeIn();
-                $(this).addClass("active");
-            }
-        });
+        // $(".support-mobile .item").click(function() {
+        //     if ($(this).hasClass("active")) {
+        //         $(".support-mobile .item").removeClass("active");
+        //     } else {
+        //         $(".support-mobile .item").removeClass("active");
+        //         $(this).fadeIn();
+        //         $(this).addClass("active");
+        //     }
+        // });
 
         // VIEW MORE
         const viewMore = document.querySelector(".view-more");
