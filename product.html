@@ -501,11 +501,11 @@
                 <!-- SUPPORT MOBILE -->
                 <div class="support-mobile d-block d-md-none">
                     <div class="container">
-                        <div class="item p-3">
+                        <div class="item p-3 mb-3">
                             <div class="top d-flex align-items-center">
                                 <img class="mt-n2" src="./images/index/staffs.png" width="40px" alt="">
                                 <div class="name d-flex align-items-center ml-4">
-                                    <h3 class="font-16 font-light mr-3">Nhân viên tư vấn</h3>
+                                    <h3 class="font-16 font-regular mr-3">Nhân viên tư vấn</h3>
                                     <i class="fa fa-angle-down mt-n2" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -515,25 +515,25 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="item p-3">
+                        <div class="item p-3 mb-3">
                             <div class="top d-flex align-items-center">
                                 <img class="mt-n2" src="./images/index/call.png" width="40px" alt="">
                                 <div class="name d-flex align-items-center ml-4">
-                                    <h3 class="font-16 font-light mr-3">Nhân viên tư vấn</h3>
+                                    <h3 class="font-16 font-regular mr-3">Tổng đài 1900 6750</h3>
                                     <i class="fa fa-angle-down mt-n2" aria-hidden="true"></i>
                                 </div>
                             </div>
                             <div class="content mt-3">
                                 <p class="mb-0">
-                                    Bạn có thể nhắn tin qua hệ thống Livechat hoặc gửi ticket yêu cầu hỗ trợ. Đội ngũ chăm sóc khách hàng sẽ trả lời và hướng dẫn bạn sử dụng Sapo
+                                    Tổng đài miễn phí 1900 6750 luôn sẵn sàng hỗ trợ, giải đáp mọi thắc mắc của bạn, trong tất cả các ngày trong tuần từ thứ Hai đến Chủ Nhật
                                 </p>
                             </div>
                         </div>
-                        <div class="item p-3">
+                        <div class="item p-3 mb-3">
                             <div class="top d-flex align-items-center">
                                 <img class="mt-n2" src="./images/index/chat.png" width="40px" alt="">
                                 <div class="name d-flex align-items-center ml-4">
-                                    <h3 class="font-16 font-light mr-3">Nhân viên tư vấn</h3>
+                                    <h3 class="font-16 font-regular mr-3">Hệ thống Livechat, ticket</h3>
                                     <i class="fa fa-angle-down mt-n2" aria-hidden="true"></i>
                                 </div>
                             </div>
@@ -728,24 +728,21 @@
     <!-- END FOOTER -->
     <!-- ==================================================== -->
 
-    <script src="./js/aboutus.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/menu-script.js"></script>
     <script>
         const supportMobileItems = document.querySelectorAll('.support-mobile .item');
 
         supportMobileItems.forEach((el, i) => {
             el.addEventListener("click", () => {
-                supportMobileItems.forEach((el1, i) => {
-                    if (el1.classList.contains("active")) {
-                        el1.classList.remove("active");
-                    } else {
-                        el1.classList.remove("active");
-                    }
-                });
-                el.classList.remove("active");
-                el.classList.add("active");
+                if (el.classList.contains("active")) {
+                    el.classList.remove("active");
+                } else {
+                    el.classList.remove("active");
+                    el.classList.add("active");
+                }
             })
-        })
+        });
 
         // $(".support-mobile .item").click(function() {
         //     if ($(this).hasClass("active")) {
@@ -770,8 +767,7 @@
                 viewMore.textContent = "Xem thêm";
             }
         });
-    </script>
-    <script type="text/javascript">
+        // 
         var packagesSwiper;
 
         packagesSwiper = new Swiper('.slide-reason .swiper-container', {
@@ -807,30 +803,6 @@
                     loop: false,
                 }
             }
-        });
-
-        function openTab(evt, cityName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        addLoadEvent(function() {
-            $(".scroll-down").click(function() {
-                var a = $(this).attr('data-href');
-                $('html, body').animate({
-                    scrollTop: $(a).offset().top
-                }, 500);
-            });
-
         });
     </script>
 

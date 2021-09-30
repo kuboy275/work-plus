@@ -1104,6 +1104,14 @@ body>#container {
 
 /* home support mobile */
 
+.support-mobile .item {
+    border-bottom: 1px solid #e7f0f6;
+}
+
+.support-mobile .item.active {
+    border: none;
+}
+
 .support-mobile .item .top {
     cursor: pointer;
 }
