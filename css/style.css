@@ -340,7 +340,7 @@ body>#container {
     top: 0;
     right: -450px;
     z-index: 2147483641;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
     overflow: auto;
 }
 

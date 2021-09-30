@@ -149,7 +149,7 @@
             <div class="box-scroll">
                 <ul class="nav nav-bottom">
                     <li>
-                        <a href="list_product.html" data-toggle="collapse" data-target="#nav-bottom-child-1">
+                        <a href="#" data-toggle="collapse" data-target="#nav-bottom-child-1">
                             Sản phẩm
                         </a>
                         <div id="nav-bottom-child-1" class="panel-collapse collapse">
@@ -1075,15 +1075,19 @@
             const overlayCloseMenu = document.querySelector("#overlayCloseMenu");
             const menuMobile = document.querySelector(".menu-mobile");
 
-            btnOpenMenu.addEventListener("click", () => {
+            btnOpenMenu.addEventListener("click", openMenu);
+            btnCloseMenu.addEventListener("click", closeMenu);
+            overlayCloseMenu.addEventListener("click", closeMenu);
+
+            function openMenu() {
                 menuMobile.classList.add("show");
-            })
-            btnCloseMenu.addEventListener("click", () => {
+                overlayCloseMenu.style.display = "block";
+            }
+
+            function closeMenu() {
                 menuMobile.classList.remove("show");
-            })
-            overlayCloseMenu.addEventListener("click", () => {
-                menuMobile.classList.remove("show");
-            })
+                overlayCloseMenu.style.display = "none";
+            }
 
 
             // function openMenu() {
