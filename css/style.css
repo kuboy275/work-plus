@@ -1102,6 +1102,29 @@ body>#container {
 }
 
 
+/* home support mobile */
+
+.support-mobile .item .top {
+    cursor: pointer;
+}
+
+.support-mobile .item .content {
+    display: none;
+}
+
+.support-mobile .item.active .content {
+    display: block;
+}
+
+.support-mobile .item.active .top i {
+    transform: rotate(180deg);
+    transition: all .3s ease-in;
+}
+
+
+/* ------- */
+
+
 /* END SUPPORT SAPO */
 
 .quick-registration {
