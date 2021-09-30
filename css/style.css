@@ -320,6 +320,8 @@ body>#container {
     line-height: 54px;
     text-decoration: none;
     cursor: pointer;
+    background: none;
+    border: none;
 }
 
 .header .main-header .btn-menu img {

@@ -123,9 +123,11 @@
                                     <a class="btn-registration" href="javascript:;"><span>Dùng thử</span></a>
                                 </li>
                             </ul>
-                            <a aria-label="button" href="javascript:;" class="d-inline-block d-xl-none btn-menu" onclick="openMenu();">
-                                <img src="./images/index/navbar.jpg" alt="">
-                            </a>
+                            <div id="btnOpenMenu">
+                                <a aria-label="button" href="#" class="d-inline-block d-xl-none btn-menu">
+                                    <img src="./images/index/navbar.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1067,8 +1069,7 @@
         <!-- ==================================================== -->
 
 
-        <!-- <script src="./js/script.js"></script> -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="./js/script.js"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script type="text/javascript">
             // const mytap = (window.ontouchstart === null) ? 'touchstart' : 'click';
@@ -1080,10 +1081,15 @@
             // btnCloseMenu.addEventListener("click", closeMenu);
             // overLayCloseMenu.addEventListener("click", closeMenu);
 
+            $('#btnOpenMenu').css('cursor', 'pointer');
+            $(document).on('click', '#btnOpenMenu', openMenu);
+
             function openMenu(e) {
+                e.preventDefault();
                 $('body').css('overflow', 'hidden');
                 $('.overlay-menu').fadeIn(300);
                 $('.menu-mobile').addClass('show');
+                alert('say Hello');
             }
 
             function closeMenu(e) {
