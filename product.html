@@ -150,11 +150,11 @@
             </div>
             <div class="box-scroll">
                 <ul class="nav nav-bottom">
-                    <li>
-                        <a data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <li class="show-sub">
+                        <a class="btnCollapse" href="#" data-toggle="collapse">
                             Sản phẩm
                         </a>
-                        <div class="collapse" id="collapseExample">
+                        <div class="collapse">
                             <ul class="sub-menu">
                                 <li>
                                     <a href="product.html">
@@ -210,10 +210,10 @@
                         <a href="app.html">Resource</a>
                     </li>
                     <li class="show-sub">
-                        <a data-toggle="collapse" href="#" data-target="#nav-bottom-child-2">
+                        <a class="btnCollapse" href="#" data-toggle="collapse">
                             Thêm
                         </a>
-                        <div id="nav-bottom-child-2" class="panel-collapse collapse">
+                        <div class="collapse">
                             <ul class="sub-menu">
                                 <li><a href="aboutus.html">Về chúng tôi</a></li>
                                 <li><a href="aboutus.html">Về chúng tôi</a></li>
@@ -681,26 +681,7 @@
     <!-- ==================================================== -->
 
 
-    <script type="text/javascript">
-        const btnOpenMenu = document.querySelector("#btnOpenMenu");
-        const btnCloseMenu = document.querySelector("#btnCloseMenu");
-        const overlayCloseMenu = document.querySelector("#overlayCloseMenu");
-        const menuMobile = document.querySelector(".menu-mobile");
-
-        btnOpenMenu.addEventListener("click", openMenu);
-        btnCloseMenu.addEventListener("click", closeMenu);
-        overlayCloseMenu.addEventListener("click", closeMenu);
-
-        function openMenu() {
-            menuMobile.classList.add("show");
-            overlayCloseMenu.style.display = "block";
-        }
-
-        function closeMenu() {
-            menuMobile.classList.remove("show");
-            overlayCloseMenu.style.display = "none";
-        }
-    </script>
+    <script src="./js/menu-script.js"></script>
     <script>
         addLoadEvent(function() {
             $.ajax({
