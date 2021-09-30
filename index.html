@@ -149,10 +149,10 @@
             <div class="box-scroll">
                 <ul class="nav nav-bottom">
                     <li>
-                        <a href="#" data-toggle="collapse" data-target="#nav-bottom-child-1">
+                        <a data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                             Sản phẩm
                         </a>
-                        <div id="nav-bottom-child-1" class="panel-collapse collapse">
+                        <div class="collapse" id="collapseExample">
                             <ul class="sub-menu">
                                 <li>
                                     <a href="product.html">
@@ -231,7 +231,6 @@
         </div>
         <!-- END START MENU MOBILE -->
         <!-- ========================================================== -->
-        <!-- <div class="overlay-menu" id="overLayCloseMenu"></div> -->
         <div class="overlay-menu" id="overlayCloseMenu"></div>
         <!-- ========================================================== -->
 
@@ -1088,20 +1087,6 @@
                 menuMobile.classList.remove("show");
                 overlayCloseMenu.style.display = "none";
             }
-
-
-            // function openMenu() {
-            //     $('body').css('overflow', 'hidden');
-            //     $('.overlay-menu').fadeIn(300);
-            //     $('.menu-mobile').addClass('show');
-            //     alert('say Hello');
-            // }
-
-            // function closeMenu(e) {
-            //     $('body').css('overflow', '');
-            //     $('.overlay-menu').fadeOut(300);
-            //     $('.menu-mobile').removeClass('show');
-            // }
         </script>
         <script>
             $('.customer__slick').slick({
