@@ -420,7 +420,7 @@ body>#container {
     transition: all .2s ease-in-out;
 }
 
-.menu-mobile .nav>li>a.rorate-icon-active:before {
+.menu-mobile .nav>li>a[aria-expanded=true]:before {
     transform: rotate(180deg);
     top: 5px;
     transition: all .2s ease-in-out;
@@ -2093,6 +2093,7 @@ body>#container {
 
 .product .down__app i {
     animation: bounce12 2s ease infinite;
+    margin-right: -3%;
 }
 
 .product .faq {

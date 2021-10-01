@@ -581,4 +581,7 @@
     .about-us .banner .btn-registration {
         padding: 0 50px;
     }
+    .product .down__app i {
+        margin-right: -10%;
+    }
 }
