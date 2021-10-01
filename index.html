@@ -1125,6 +1125,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/custom.js"></script>
     <script>
+        // brand mobile responsive add slick js
         $('.customer__slick').slick({
             slidesToShow: 2,
             arrows: false,
@@ -1139,18 +1140,7 @@
             }]
         });
         // 
-        const supportMobileItems = document.querySelectorAll('.support-mobile .item');
 
-        supportMobileItems.forEach((el, i) => {
-            el.addEventListener("click", () => {
-                if (el.classList.contains("active")) {
-                    el.classList.remove("active");
-                } else {
-                    el.classList.remove("active");
-                    el.classList.add("active");
-                }
-            })
-        });
         // 
         var packagesSwiper;
 

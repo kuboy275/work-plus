@@ -150,10 +150,10 @@
             <div class="box-scroll">
                 <ul class="nav nav-bottom">
                     <li class="show-sub">
-                        <a class="btnCollapse" href="#" data-toggle="collapse">
+                        <a href="#" data-toggle="collapse" data-target="#nav-bottom-child-1">
                             Sản phẩm
                         </a>
-                        <div class="collapse">
+                        <div class="panel-collapse collapse" id="nav-bottom-child-1">
                             <ul class="sub-menu">
                                 <li>
                                     <a href="product.html">
@@ -209,10 +209,10 @@
                         <a href="app.html">Resource</a>
                     </li>
                     <li class="show-sub">
-                        <a class="btnCollapse" href="#" data-toggle="collapse">
+                        <a href="#" data-toggle="collapse" data-target="#nav-bottom-child-2">
                             Thêm
                         </a>
-                        <div class="collapse">
+                        <div class="panel-collapse collapse" id="nav-bottom-child-2">
                             <ul class="sub-menu">
                                 <li><a href="aboutus.html">Về chúng tôi</a></li>
                                 <li><a href="aboutus.html">Về chúng tôi</a></li>
@@ -734,43 +734,17 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/custom.js"></script>
     <script>
-        const supportMobileItems = document.querySelectorAll('.support-mobile .item');
-
-        supportMobileItems.forEach((el, i) => {
-            el.addEventListener("click", () => {
-                if (el.classList.contains("active")) {
-                    el.classList.remove("active");
-                } else {
-                    el.classList.remove("active");
-                    el.classList.add("active");
-                }
-            })
-        });
-
-        // $(".support-mobile .item").click(function() {
-        //     if ($(this).hasClass("active")) {
-        //         $(".support-mobile .item").removeClass("active");
-        //     } else {
-        //         $(".support-mobile .item").removeClass("active");
-        //         $(this).fadeIn();
-        //         $(this).addClass("active");
-        //     }
-        // });
-
         // VIEW MORE
-        const viewMore = document.querySelector(".view-more");
-        const contentOpacity = document.querySelector(".content-opacity");
-        const contentHide = document.querySelector(".content-hide");
-        viewMore.addEventListener("click", () => {
-            contentOpacity.classList.toggle("faq__opacity");
-            contentHide.classList.toggle("hide");
-            if (viewMore.textContent == "Xem thêm") {
-                viewMore.textContent = "Rút gọn";
+        $(".view-more").click(function() {
+            $(this).prev().slideToggle(200);
+            $('.content-opacity').toggleClass("faq__opacity");
+            $('.content-hide').toggleClass("hide");
+            if ($(this).text() == "Xem thêm") {
+                $(this).text("Rút gọn");
             } else {
-                viewMore.textContent = "Xem thêm";
+                $(this).text("Xem thêm");
             }
         });
-        // 
         var packagesSwiper;
 
         packagesSwiper = new Swiper('.slide-reason .swiper-container', {

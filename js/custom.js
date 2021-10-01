@@ -16,15 +16,17 @@ $(document).ready(function() {
         $('.menu-mobile').removeClass('show');
     }
 
-    // const showSub = document.querySelectorAll(".show-sub");
-    // showSub.forEach((e, i) => {
-    //     const btnCollapse = e.querySelector('.btnCollapse');
-    //     const subCollapse = e.querySelector('.collapse');
-    //     btnCollapse.addEventListener("click", () => {
-    //         btnCollapse.classList.toggle('rorate-icon-active');
-    //         subCollapse.classList.toggle('show');
-    //     })
-    // })
 
+    if (document.querySelectorAll('.support-mobile .item')) {
+        $(".support-mobile .item").click(function() {
+            if ($(this).hasClass("active")) {
+                $(".support-mobile .item").removeClass("active");
+            } else {
+                $(".support-mobile .item").removeClass("active");
+                $(this).fadeIn();
+                $(this).addClass("active");
+            }
+        });
+    }
     // END POPUP MENU
 });
